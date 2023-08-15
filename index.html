@@ -44,7 +44,7 @@
 </select>
 </div>
 
-<div style="margin-top:24px;">
+<div style="margin-top:24px; text-align: left;">
 City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" title="City"><option value="">--None--</option><option value="Abha">Abha</option>
 <option value="Abidjan">Abidjan</option>
 <option value="Abu Dhabi">Abu Dhabi</option>
@@ -211,12 +211,15 @@ City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" ti
 </select>
 </form>
 <script>
+
+  $(document).ready(function () {
     var input = document.querySelector("#phone");
     window.intlTelInput(input, {
         separateDialCode: true,
         excludeCountries: ["in", "il"],
         preferredCountries: ["SA", "AE", "JO",]
     });
+  })
 </script>
 
 <script type="text/javascript">
