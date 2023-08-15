@@ -2,7 +2,6 @@
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="Stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/scl/fi/kl7gz9l6mc5ttwzgz5zu5/eoncssfile.css?rlkey=5zqjt5wlbhu5ff6g6yw6mlyti">
 
 <style>
 
@@ -22,13 +21,16 @@
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
-  text-align: left;
+  text-align: right;
+  width: 100%;
+  display: inline-block;
 }
 .inputstyle {
   border: 1px solid #00c4b3;
   border-radius: 8px;
   padding: 18px 16px 18px 16px;
   width: 100%;
+  direction: rtl;
 }
 .selectstyle {
   background-color: #ffffff;
@@ -39,6 +41,7 @@
   font-weight: 400;
   border-radius: 8px;
   padding: 10px 10px;
+  direction: rtl;
 }
 .margintop {
   margin-top: 24px;
@@ -64,7 +67,6 @@
 }
 </style>
 
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -78,39 +80,39 @@
  <input type="hidden" name="debugEmail" value="feras@buttercloud.com">  
 
 <div class="margintop">
-<label class ="required labelstyle" for="first_name">First Name<span style="color:#FF5555;">*</span></label><input class="inputstyle" id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="Name" required/>
+<label class ="required labelstyle" for="first_name">الاسم الاول<span style="color:#FF5555;">*</span></label><input class="inputstyle" id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="الاسم الاول" required/>
 </div>
 <div class="margintop">
-<label class="required labelstyle"  for="last_name">Last Name<span style="color:#FF5555;">*</span></label><input class="inputstyle" id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Name" required /><br>
+<label class="required labelstyle"  for="last_name">الاسم الاخير<span style="color:#FF5555;">*</span></label><input class="inputstyle" id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="الاسم الاخير" required /><br>
 </div>
 <div class="margintop">
-<label class="required labelstyle" for="phone">Telephone<span style="color:#FF5555;">*</span></label>
-<input class="teldesign iti" style="max-width:628px;; border:1px solid#00C4B3; border-radius:10px; padding:20px 20px;"  name="phone" type="text" id="phone" required/>
+<label class="required labelstyle" for="phone">الهاتف<span style="color:#FF5555;">*</span></label>
+<input class="teldesign iti" style="border:1px solid #00C4B3; border-radius:10px; padding:20px 20px;" name="phone" type="text" id="phone" required/>
 </div>
 
 <div class="margintop">
-<label class="required labelstyle"  for="email">Email<span style="color:#FF5555;">*</span></label><input class="inputstyle"   id="email" maxlength="80" name="email" size="20" type="text" placeholder="Name@email.com"  required/><br>
+<label class="required labelstyle"  for="email">البريد الإلكتروني<span style="color:#FF5555;">*</span></label><input class="inputstyle"   id="email" maxlength="80" name="email" size="20" type="text" placeholder="Name@email.com"  required/><br>
 </div>
 <div style="margin-top:24px;">
-<label class="required labelstyle" for ="Country">Country<span style="color:#FF5555;">*</span></label>
+<label class="required labelstyle" for ="Country">مدينة<span style="color:#FF5555;">*</span></label>
 <select class="selectstyle"  id="00N5f00000gbA18" name="00N5f00000gbA18" required>
-<option Selected disabled value="">Select Country</option>
-<option value="AE">UAE</option>
-<option value="SA">KSA</option>
-<option value="JO">Jordan</option>
-<option value="PS">Palestine</option>
-<option value="QA">Qatar</option>
-<option value="KW">Kuwait</option>
-<option value="OM">Oman</option>
-<option value="MA">Morocco</option>
-<option value="BH">Bahrain</option>
-<option value="IQ">Iraq</option>
+<option Selected disabled value="">- الدولة -</option>
+<option value="AE">الإمارات العربية المتحدة</option>
+<option value="SA">المملكة العربية السعودية</option>
+<option value="JO">الأردن</option>
+<option value="PS">فلسطين</option>
+<option value="QA">قطر</option>
+<option value="KW">الكويت</option>
+<option value="OM">عُمان</option>
+<option value="MA">المغرب</option>
+<option value="BH">البحرين</option>
+<option value="IQ">العراق</option>
 <option value="Others">Others</option>
 </select>
 </div>
 
 <div style="margin-top:24px; text-align: left;">
-City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" title="City"><option value="">--None--</option><option value="Abha">Abha</option>
+الدولة<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" title="City"><option value="">--None--</option><option value="Abha">Abha</option>
 <option value="Abidjan">Abidjan</option>
 <option value="Abu Dhabi">Abu Dhabi</option>
 <option value="Ajman">Ajman</option>
@@ -235,24 +237,24 @@ City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" ti
 
 
 <div class="margintop">
-<label class ="required labelstyle" for ="speciality">Speciality<span style="color:#FF5555;">*</span></label>
+<label class ="required labelstyle" for ="speciality">التخص<span style="color:#FF5555;">*</span></label>
 <select class ="selectstyle" name="00N5f00000RFe6r" id="00N5f00000RFe6r" required>
 <option style="font-family:Poppins; Font-size:16px; Font-weight:normal;"selected disabled>-Select Speciality-</option>
-<option value="General Dentist">General Dentist</option>
-<option value="Orthodontist">Orthodontist</option>
-<option value="Endodontist">Endodontist</option>
-<option value="Periodontist">Periodontist</option>
-<option value="Other">Other</option>
+<option value="General Dentist">طبيب أسنان عام</option>
+<option value="Orthodontist">أخصائي معالجة لبية</option>
+<option value="Endodontist">أخصائي تقويم أسنان</option>
+<option value="Periodontist">اخصائي اللثة</option>
+<option value="Other">أخرى</option>
 </select>
 </div>
 <div style=" margin-top:24px; display:flex;; gap:10px;">
-<input class="checkboxstyle" name="subscribe_to_mailing_list" id="checkbox" type="checkbox"><p class="pstyle" >Subscribe to our mailing list</p>
+<input class="checkboxstyle" name="subscribe_to_mailing_list" id="checkbox" type="checkbox"><p class="pstyle" >اشترك في قائمتنا البريدية</p>
 </div>
-<p style="font-family:Poppins; font-size:12px; margin-top:10px; text-align:left; ">to receive the latest updates, tips and promotions via email, phone/SMS.</p>
+<p style="font-family:Poppins; font-size:12px; margin-top:10px; text-align:left; ">ليصلك اخر التحديثات, النصائح والعروض.</p>
 <div style="margin-top:10px;">
 </div>
 <div style=" margin-top:24px; display:flex;; gap:10px;">
-<input class="checkboxstyle" name="agree_to_privacy_policy" id="checkbox1" type="checkbox" required><p class="pstyle">I have read and agree to the <a style="text-decoration:underline; color:black;" href="https://eon-aligner-v2.webflow.io/doctors/privacy-policy">Privacy Policy</a></p>
+<input class="checkboxstyle" name="agree_to_privacy_policy" id="checkbox1" type="checkbox" required><p class="pstyle">I have read and agree to the <a style="text-decoration:underline; color:black;" href="https://eon-aligner-v2.webflow.io/doctors/privacy-policy">سياسة الخصوصية</a></p>
 </div>
 
 <br />
