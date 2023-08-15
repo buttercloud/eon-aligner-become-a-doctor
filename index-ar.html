@@ -86,6 +86,11 @@
 <label class="required labelstyle"  for="last_name">الاسم الاخير<span style="color:#FF5555;">*</span></label><input class="inputstyle" id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="الاسم الاخير" required /><br>
 </div>
 <div class="margintop">
+
+ <!-- Country Code for Phone -->
+<input type="hidden" id="00N5f00000geTy8" name="00N5f00000geTy8">
+
+
 <label class="required labelstyle" for="phone">الهاتف<span style="color:#FF5555;">*</span></label>
 <input class="teldesign iti" style="border:1px solid #00C4B3; border-radius:10px; padding:20px 20px;" name="phone" type="text" id="phone" required/>
 </div>
@@ -327,13 +332,22 @@
 <script type="text/javascript">
 
   $(document).ready(function () {
+
     var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
+    window.iti = window.intlTelInput(input, {
         separateDialCode: true,
         excludeCountries: ["in", "il"],
         preferredCountries: ["SA", "AE", "JO",]
     });
-  })
+
+    // Initial state
+    $("#00N5f00000geTy8").val("00" + window.iti.getSelectedCountryData().dialCode);
+
+    input.addEventListener("countrychange", function() {
+      //console.log("00" + window.iti.getSelectedCountryData().dialCode)     
+      $("#00N5f00000geTy8").val("00" + window.iti.getSelectedCountryData().dialCode);
+    });
+  });
 </script>
 </body>
 </html>
