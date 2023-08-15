@@ -4,8 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link rel="Stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/scl/fi/kl7gz9l6mc5ttwzgz5zu5/eoncssfile.css?rlkey=5zqjt5wlbhu5ff6g6yw6mlyti">
 <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css"/>
-<script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js">
-</script>    
+<script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -213,17 +212,6 @@ City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" ti
 <option value="0125f0000009yWa">Lead (Enterprise)</option>
 </select>
 </form>
-<script>
-
-  $(document).ready(function () {
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        separateDialCode: true,
-        excludeCountries: ["in", "il"],
-        preferredCountries: ["SA", "AE", "JO",]
-    });
-  })
-</script>
 
 <script type="text/javascript">
         var cityMap = {
@@ -265,7 +253,19 @@ City:<select  class="selectstyle" id="00N5f00000gbA1X" name="00N5f00000gbA1X" ti
                 }
             });
         });
-    </script>
+</script>
 <script type="text/javascript">function googleCallback() {const submitButton = document.getElementById("sales-submit-button");submitButton.removeAttribute("disabled");submitButton.classList.remove("submitbutton2Disabled");}</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        separateDialCode: true,
+        excludeCountries: ["in", "il"],
+        preferredCountries: ["SA", "AE", "JO",]
+    });
+  })
+</script>
 </body>
 </html>
